@@ -42,3 +42,17 @@ const productos = [
     console.log(`Producto: ${producto.descripcion} - Precio con IVA: $${producto.precioConIVA}`);
   });
   export default mostrarProductos;
+
+     // 5 - Ordenar productos por precio (de menor a mayor) usando sort
+     const productosOrdenados = [...productos].sort((a, b) => a.precio - b.precio);
+     console.log(productosOrdenados);
+     // 5 - Agregar un nuevo producto al final del array
+   
+     productos.push({ descripcion: "Parlante Bluetooth", precio: 59000.90 });
+     console.log(productos);
+   
+       // 6 - Eliminar el producto con el precio más bajo
+     
+       const precioMin = Math.min(...productos.map(p => p.precio));
+       const productosSinMasBarato = productos.filter(p => p.precio !== precioMin);
+       console.log(productosSinMasBarato);
