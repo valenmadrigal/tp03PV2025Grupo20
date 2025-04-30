@@ -35,7 +35,7 @@ const productos = [
       precioConIVA: parseFloat((producto.precio * (1 + iva)).toFixed(2)),
     }));
   }
-  
+
   const productosConIVA = calcularPrecioConIVA(productos, 21);
   console.log("\n--- Productos con IVA incluido (21%) ---");
   productosConIVA.forEach(producto => {

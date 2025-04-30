@@ -3,7 +3,7 @@
 // TaskItem 
 
 
-jsx
+
 import React from 'react';
 
 const TaskItem = ({ task, onToggleCompleted, onDelete }) => {
