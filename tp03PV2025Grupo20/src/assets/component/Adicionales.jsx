@@ -9,14 +9,14 @@ const productos = [
   ];
   
   // 1 - Mostrar en consola cada producto usando forEach
-  function mostrarProductos(arrayProductos) {
+  function MostrarProductos(arrayProductos) {
     arrayProductos.forEach(producto => {
       console.log(`Producto: ${producto.descripcion} - Precio: $${producto.precio}`);
     });
   }
   
   console.log("--- Lista de productos ---");
-  mostrarProductos(productos);
+  MostrarProductos(productos);
   
   // 2 - Crear un nuevo array con los productos cuyo precio sea mayor a $50000, usando filter
   function obtenerProductosMayorPrecio(arrayProductos, precioMinimo) {
@@ -25,7 +25,7 @@ const productos = [
   
   const productosMayorA50000 = obtenerProductosMayorPrecio(productos, 50000);
   console.log("\n--- Productos con precio mayor a $50000 ---");
-  mostrarProductos(productosMayorA50000);
+  MostrarProductos(productosMayorA50000);
   
   // 3 - Crear un array con los productos, pero con el precio con IVA incluido (21%), usando map
   function calcularPrecioConIVA(arrayProductos, porcentajeIVA) {
@@ -41,4 +41,4 @@ const productos = [
   productosConIVA.forEach(producto => {
     console.log(`Producto: ${producto.descripcion} - Precio con IVA: $${producto.precioConIVA}`);
   });
-  export default mostrarProductos;
+  export default MostrarProductos;
