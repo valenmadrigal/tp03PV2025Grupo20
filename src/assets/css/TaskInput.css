@@ -155,3 +155,11 @@
 .task-input-container .tarea button.realizar:last-of-type:hover {
   background-color: #8d0909;
 }
+.task-input-container .tarea button.realizar.hecho {
+  background-color: black; /* Negro para "Hecho" */
+  color: white;
+}
+
+.task-input-container .tarea button.realizar.hecho:hover {
+  background-color: #333;
+}

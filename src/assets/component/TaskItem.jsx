@@ -16,39 +16,37 @@ function TaskItem (props) {
         console.log("Tarea Eliminada")
         alert("Tarea Eliminada")
     }
+ const cambioEstado = (estadoActual) => {
+    return estadoActual === "realizada" ? "pendiente" : "realizada";
+  };
 
-    const cambioEstado = (estado) => {
-        if(estado == "realizada") {
-            return "pendiente"
-        }
-        else {
-            return "realizada"
-        }
-    }
-
-    const realizar = (evento) => {
-        const elementoNuevo = {
-            id:elemento.id,
-            descripcion: elemento.descripcion,
-            alumno: elemento.alumno,
-            estado: cambioEstado(elemento.estado)
-        };
-        setElemento(elementoNuevo);
-        console.log("Tarea Realizada")
-        alert("Tarea Realizada")
-    }
+      const realizar = (evento) => {
+    const elementoNuevo = {
+      ...elemento,
+      estado: cambioEstado(elemento.estado)
+    };
+    setElemento(elementoNuevo);
+    console.log(`Tarea ahora en estado: ${elementoNuevo.estado}`);
+    alert(`La tarea ahora esta: ${elementoNuevo.estado === 'realizada' ? 'Hecha' : 'para Realizar'}`);
+  };
 
     return (
-        <div className="task-input-container">
-          <div className="tarea">
-            <h3>{elemento.descripcion}</h3>
-            <h3 className="nombre">{elemento.alumno}</h3>
-            <h3>Estado: {elemento.estado}</h3>
-       <div className="botones-tarea"> {/* Nuevo div para los botones */}
-            <button className="realizar" onClick={realizar}>Realizada</button>
-            <button className="realizar" onClick={eliminar}>Eliminar</button>
-          </div>  </div>
+       <div className="task-input-container">
+      <div className="tarea">
+        <h3>{elemento.descripcion}</h3>
+        <h3 className="nombre">{elemento.alumno}</h3>
+        <h3>Estado: {elemento.estado}</h3>
+        <div className="botones-tarea">
+          <button
+            className={`realizar ${elemento.estado === 'realizada' ? 'hecho' : ''}`}
+            onClick={realizar}
+          >
+            {elemento.estado === 'realizada' ? 'Hecha' : 'Realizada'}
+          </button>
+          <button className="realizar" onClick={eliminar }>Eliminar</button>
         </div>
+      </div>
+    </div>
     );
 }
 
