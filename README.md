@@ -1,12 +1,10 @@
-# React + Vite
+INTEGRANTES GRUPO 20:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Franco Arcibia , Usuario Github :Franco-2023-20
+Selene Espejo , Usuario Github :TaliaEspejo
+Axel Dominguez , Usuario Github :AxelDanielDominguez · he/him
+Valentina Madrigal , Usuario Github :valenmadrigal
+Franco Mamani  , Usuario Github :francozxy
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Descripcion Proyecto : 
+Una pagina donde trabajan 2 componentes , uno Productos,jsx , que basicamente tiene una array de productos , que se pueden filtrar , y ademas agregar otro producto.Incluye otro componente tambien, Tareas.jsx , donde se almacena los tareas del grupo20 en una array , trabaja con: taskinput, para incluir otra tarea , taskitem con las diferentes funciones para manejar las tareas , y por ultimo tasklist que muestra todas las tareas y trabaja con taskitem. Estos sos componentes son exportados a otr componente App.jsx donde son utlizados y mostrados en la pagina. Por ultimo App.jsx tambien es exportado a Main.jsx.

@@ -39,6 +39,7 @@ function Producto() {
  const mostrarProductos = () => {
   let mensajeAlerta = "Lista de Productos:\n";
   productos.forEach(p => {
+    console.log(`Producto: ${p.descripcion} - Precio: $${p.precio}\n`)
     mensajeAlerta += `Producto: ${p.descripcion} - Precio: $${p.precio}\n`;
   });
   alert(mensajeAlerta);
