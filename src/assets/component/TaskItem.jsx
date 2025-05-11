@@ -2,9 +2,7 @@
 
 // TaskItem 
 
-
-jsx
-import React from 'react';
+import { useState } from "react";
 
 const TaskItem = ({ task, onToggleCompleted, onDelete }) => {
   return (
