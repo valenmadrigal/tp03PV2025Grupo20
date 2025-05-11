@@ -1,5 +1,4 @@
-jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const TaskInput = ({ onAddTask }) => {
 const [text, setText] = useState('');
