@@ -1,24 +1,25 @@
-// TaskList.jsx
-import React from 'react';
-import TaskItem from './TaskItem';
 
-const TaskList = ({ tasks, onToggleCompleted, onDelete }) => {
-  if (tasks.length === 0) {
-    return <p>No hay tareas aún.</p>;
-  }
+import TaskItem from "./TaskItem";
 
-  return (
-    <ul>
-      {tasks.map((task) => (
-        <TaskItem
-          key={task.id}
-          task={task}
-          onToggleCompleted={() => onToggleCompleted(task.id)}
-          onDelete={() => onDelete(task.id)}
-        />
-      ))}
-    </ul>
-  );
-};
+import '../css/TaskInput.css';
+
+function TaskList (props) {
+
+    const [lista,setLista] = props.tareas;
+
+
+    return (
+        <div className="task-input-container">
+            <h3 className="titulo-tarea">Lista de Tareas</h3>
+            <ul className="tareas">
+                {lista.map((elemento)=> (<li key={elemento.id}>
+                    <TaskItem tarea = {elemento} listaTareas={[lista,setLista]}></TaskItem>
+
+                    </li>))}
+            </ul>
+
+        </div>
+    );
+}
 
 export default TaskList;

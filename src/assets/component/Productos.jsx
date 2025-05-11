@@ -35,12 +35,13 @@ function Producto() {
     }
   };
 
-  const mostrarProductos = () => {
-    productos.forEach(p => {
-      console.log(`Producto: ${p.descripcion} - Precio: $${p.precio}`);
-    });
-  };
-
+ const mostrarProductos = () => {
+  let mensajeAlerta = "Lista de Productos:\n";
+  productos.forEach(p => {
+    mensajeAlerta += `Producto: ${p.descripcion} - Precio: $${p.precio}\n`;
+  });
+  alert(mensajeAlerta);
+};
   const ordenarProductos = () => {
     const ordenados = [...productos].sort((a, b) => a.precio - b.precio);
     setProductos(ordenados);
