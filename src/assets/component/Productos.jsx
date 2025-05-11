@@ -29,8 +29,9 @@ function Producto() {
       setProductosOriginales(nuevosProductos); // Actualiza originales
       setDescripcion('');
       setPrecio('');
-      setIvaAgregado(false); // Reiniciar IVA si se agrega producto nuevo
-    } else {
+      setIvaAgregado(false);
+      alert("Se Agrego nuevo Producto") 
+      } else {
       alert("Completa la descripción y el precio");
     }
   };

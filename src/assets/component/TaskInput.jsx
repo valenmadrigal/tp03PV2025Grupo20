@@ -34,8 +34,10 @@ const agregarTarea = (event) => {
     console.log(nuevaTarea.descripcion);
     setAlumno("");
     setNuevo("");
-    console.log(nuevaTarea);
-    }
+    console.log(nuevaTarea.alumno," tiene una nueva tarea");
+    alert(nuevaTarea.alumno+" tiene una nueva tarea");
+ 
+}
 }
 
     return(

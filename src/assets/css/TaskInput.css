@@ -1,4 +1,11 @@
-
+.task-input-container .nombre {
+  text-align: center;
+  color: #eb3030;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
 .task-input-container {
   background-color: #222831;
   border: 2px solid #00adb5;

@@ -14,6 +14,7 @@ function TaskItem (props) {
         console.log(listaEliminada);
         setLista(listaEliminada);
         console.log("Tarea Eliminada")
+        alert("Tarea Eliminada")
     }
 
     const cambioEstado = (estado) => {
@@ -34,13 +35,14 @@ function TaskItem (props) {
         };
         setElemento(elementoNuevo);
         console.log("Tarea Realizada")
+        alert("Tarea Realizada")
     }
 
     return (
         <div className="task-input-container">
           <div className="tarea">
             <h3>{elemento.descripcion}</h3>
-            <h3>{elemento.alumno}</h3>
+            <h3 className="nombre">{elemento.alumno}</h3>
             <h3>Estado: {elemento.estado}</h3>
        <div className="botones-tarea"> {/* Nuevo div para los botones */}
             <button className="realizar" onClick={realizar}>Realizada</button>
