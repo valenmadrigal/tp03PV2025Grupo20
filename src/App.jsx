@@ -1,20 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Producto from './assets/component/Productos.jsx'
+import Tareas from './assets/component/Tareas.jsx'
+import './assets/css/App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
    <div className="contenedor-principal" style={{ 
   textAlign: 'center', 
-  textDecoration: 'underline', 
   fontWeight: 'bold' 
+  
 }}>
-  <h1>Programacion Visual - TP3</h1>
-  <Producto></Producto>
+  <h1 className='titulo'>Programacion Visual - TP3</h1>
+  <div className="componentes-lado-a-lado">
+  <div>
+    <Producto />
+  </div>
+  <div>
+    <Tareas />
+  </div>
+</div>
 </div>
   );
 }

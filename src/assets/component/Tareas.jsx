@@ -14,7 +14,8 @@ function Tareas () {
         {id:2,descripcion: "Agregar Colaboradores", alumno:"Franco", estado: "pendiente"},
         {id:3,descripcion: "Crear Rama de Trabajo", alumno:"Selene", estado: "pendiente"},
         {id:4,descripcion: "Hacer Commits con Avanzes", alumno: "Franco", estado: "pendiente"},
-         {id:5,descripcion: "Actualizar avance en Readme", alumno: "Xel", estado: "pendiente"}]);
+         {id:5,descripcion: "Actualizar avance en Readme", alumno: "Axel", estado: "pendiente"}]
+        );
      
     return(
         <div className="task-input-container">

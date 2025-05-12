@@ -4,12 +4,18 @@ import '../css/producto.css';
 
 function Producto() {
   const [productos, setProductos] = useState([ 
-    { descripcion: "Auriculares Inalámbricos", precio: 49990.5 },
-    { descripcion: "Mouse Óptico", precio: 15500 },
-    { descripcion: "Monitor 24 Pulgadas", precio: 120000.99 },
-    { descripcion: "Webcam HD", precio: 24800.75 },
-    { descripcion: "Impresora Multifunción", precio: 85000 },
-    { descripcion: "Cable HDMI", precio: 10900 },]);
+     { descripcion: "Webcam HD", precio: 19000.75 },
+  { descripcion: "Teclado Mecánico RGB", precio: 45500.00 },
+  { descripcion: "Mouse Inalámbrico Ergonómico", precio: 18990.50 },
+  { descripcion: "Monitor LED 24 Pulgadas", precio: 115000.99 },
+  { descripcion: "CABLE USB", precio: 11500.99 },
+  { descripcion: "Auriculares Gaming con Micrófono", precio: 32800.25 },
+  { descripcion: "Parlantes Estéreo Bluetooth", precio: 27650.80 },
+  { descripcion: "Silla de Escritorio Ergonómica", precio: 89999.00 },
+  { descripcion: "Impresora Multifunción a Color", precio: 152000.60 },
+  { descripcion: "Disco Duro Externo 1TB", precio: 68700.45 },
+  { descripcion: "Memoria RAM 16GB DDR4", precio: 51300.10 },]);
+    
   const [productosOriginales, setProductosOriginales] = useState([]);
   const [descripcion, setDescripcion] = useState('');
   const [precio, setPrecio] = useState('');
@@ -23,18 +29,21 @@ function Producto() {
       setProductosOriginales(nuevosProductos); // Actualiza originales
       setDescripcion('');
       setPrecio('');
-      setIvaAgregado(false); // Reiniciar IVA si se agrega producto nuevo
-    } else {
+      setIvaAgregado(false);
+      alert("Se Agrego nuevo Producto") 
+      } else {
       alert("Completa la descripción y el precio");
     }
   };
 
-  const mostrarProductos = () => {
-    productos.forEach(p => {
-      console.log(`Producto: ${p.descripcion} - Precio: $${p.precio}`);
-    });
-  };
-
+ const mostrarProductos = () => {
+  let mensajeAlerta = "Lista de Productos:\n";
+  productos.forEach(p => {
+    console.log(`Producto: ${p.descripcion} - Precio: $${p.precio}\n`)
+    mensajeAlerta += `Producto: ${p.descripcion} - Precio: $${p.precio}\n`;
+  });
+  alert(mensajeAlerta);
+};
   const ordenarProductos = () => {
     const ordenados = [...productos].sort((a, b) => a.precio - b.precio);
     setProductos(ordenados);
@@ -71,8 +80,28 @@ function Producto() {
   };
    return (
     <div className="producto-wrapper">
-      <h2 className="producto-titulo">Gestión de Productos</h2>
 
+      <h2 className="producto-titulo">Gestión de Productos</h2>
+      <div className="producto-wrapper">
+  
+      <button
+          onClick={mostrarProductos}
+          style={{
+            backgroundColor: '#34495e', 
+            color: '#ecf0f1', 
+            border: '1px solid #434a54', 
+            borderRadius: '10px',
+            padding: '0.8rem 1.5rem', 
+            fontSize: '1.2rem', 
+            cursor: 'pointer',
+            transition: 'background-color 0.3s ease',
+          }}
+          onMouseEnter={(e) => (e.target.style.backgroundColor = '#434a54')}
+          onMouseLeave={(e) => (e.target.style.backgroundColor = '#34495e')}
+        >
+          Mostrar en Consola
+        </button>
+    </div>
       <div className="producto-formulario">
         <input
           type="text"
@@ -88,6 +117,8 @@ function Producto() {
         />
         <button onClick={agregarProducto}>Agregar</button>
       </div>
+
+
 
       <div className="producto-botones">
         <button onClick={filtrarProductos}>Filtrar '&gt;' $20.000</button>
